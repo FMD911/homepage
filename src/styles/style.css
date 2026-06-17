@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
@@ -5,27 +9,48 @@ body {
   color: #111;
 }
 
-.hero {
-  background: #222;
+.container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #111;
   color: white;
-  padding: 40px;
-  text-align: center;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main {
+  padding: 32px;
 }
 
 .profile img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.projects, .contact {
-  padding: 40px;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .icons i {
-  font-size: 32px;
-  margin-right: 12px;
+  font-size: 28px;
+  margin-right: 10px;
   cursor: pointer;
 }
 
